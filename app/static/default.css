@@ -1,0 +1,14 @@
+body {
+  padding-top: 50px; }
+
+.intro {
+  padding: 40px 15px;
+  text-align: center; }
+
+.optionBlock, .musicBlock {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/*# sourceMappingURL=default.css.map */
