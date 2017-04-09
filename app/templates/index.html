@@ -4,6 +4,7 @@
     <h1>RelevantMusic</h1>
     <h2>Instantly play appropriate music for your tabletop campaign!</h2>
 </div>
+<!--
 <div class ='row' id="firstRow"></div>
     <div class='col-md-4' id='firstColumn'></div>
     <div class='col-md-4' id='middleColumn'></div>
@@ -18,5 +19,19 @@
     <div class='col-md-4'>
         <button type="button" class="btn btn-primary btn-lg btn-block optionBlock"><h3>Non-Combat</h3></button>
     </div>
+    -->
+<div class='row'>
+    {% for button in buttons %}
+        {% if buttons|count is greaterthan(3) %}
+        {# Deal with >3 buttons here 
+        {%- for row in items|batch(3, '&nbsp;') %}
+        #}
+        <h1>Buttons|count > 3</h1>
+        {% else %}
+        <div class='col-md-4'>
+            <button type="button" class="btn btn-primary btn-lg btn-block optionBlock"><h3>{{ button.buttonText }}</h3></button>
+    </div>
+        {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}
