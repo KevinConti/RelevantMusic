@@ -29,7 +29,7 @@
         <h1>Buttons|count > 3</h1>
         {% else %}
         <div class='col-md-4'>
-            <button type="button" class="btn btn-primary btn-lg btn-block optionBlock"><h3>{{ button.buttonText }}</h3></button>
+            <button type="button" class="btn btn-primary btn-lg btn-block {{ button.buttonType }}"><h3>{{ button.buttonText }}</h3></button>
     </div>
         {% endif %}
     {% endfor %}

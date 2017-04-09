@@ -14,7 +14,7 @@ from app import db
 class Button(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     buttonText = db.Column(db.String(64), index=True, unique=True)
-    isMusicButton = db.Column(db.Boolean)
+    buttonType = db.Column(db.String(64))
     #button.children
     children = db.relationship('ChildrenIds', backref='parent', lazy='dynamic')
 
