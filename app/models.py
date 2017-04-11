@@ -19,7 +19,7 @@ class Button(db.Model):
     children = db.relationship('ChildrenIds', backref='parent', lazy='dynamic')
 
     def __repr__(self):
-        return '<Button %r, isMusicButton=%r' % (self.buttonText, self.isMusicButton)
+        return '<Button %r, isMusicButton=%r' % (self.buttonText, self.buttonType)
 
 class ChildrenIds(db.Model):
     id = db.Column(db.Integer, primary_key=True)

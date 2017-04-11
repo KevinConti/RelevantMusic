@@ -1,3 +1,4 @@
+{# TODO: Add jinja2/html logic so that when a button is clicked, it routes to /index/<id> #}
 {% extends "default.html" %}
 {% block content %}
 <div class='intro'>
@@ -22,16 +23,9 @@
     -->
 <div class='row'>
     {% for button in buttons %}
-        {% if buttons|count is greaterthan(3) %}
-        {# Deal with >3 buttons here 
-        {%- for row in items|batch(3, '&nbsp;') %}
-        #}
-        <h1>Buttons|count > 3</h1>
-        {% else %}
         <div class='col-md-4'>
             <button type="button" class="btn btn-primary btn-lg btn-block {{ button.buttonType }}"><h3>{{ button.buttonText }}</h3></button>
     </div>
-        {% endif %}
     {% endfor %}
 </div>
 {% endblock %}
